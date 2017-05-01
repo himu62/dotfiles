@@ -13,6 +13,8 @@ make -C ~/dotfiles
 - Homebrew
   + google-chrome
     * LastPass
+  + git
+    * gitconfig
   + docker
   + virtualbox
   + vagrant
@@ -38,7 +40,7 @@ make -C ~/dotfiles
     * emmet
     * editorconfig
     * go-plus
-  + coreutils (`--with-default-names`)
+  + coreutils
     * path
 
 - Google日本語入力
