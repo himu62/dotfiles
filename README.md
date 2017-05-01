@@ -42,5 +42,4 @@ make -C ~/dotfiles
     * go-plus
   + coreutils
     * path
-
-- Google日本語入力
+  + google-japanese-ime
