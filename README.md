@@ -38,5 +38,7 @@ make -C ~/dotfiles
     * emmet
     * editorconfig
     * go-plus
+  + coreutils (`--with-default-names`)
+    * path
 
 - Google日本語入力
