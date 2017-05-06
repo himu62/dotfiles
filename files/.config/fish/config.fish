@@ -2,12 +2,13 @@ function fish_prompt
   set_color green
   echo -n "~"
   set_color normal
-  echo -n ">"
+  echo -n "> "
 end
 
-set -x PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
+set -U fish_user_paths /usr/local/bin
+set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
 set -x MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 
-set -x PATH /usr/local/opt/libressl/bin $PATH
+set -U fish_user_paths /usr/local/opt/libressl/bin $fish_user_paths
 
-set -x PATH ~/bin $PATH
+set -U fish_user_paths ~/bin $fish_user_paths
