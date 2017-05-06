@@ -22,12 +22,14 @@ make -C ~/dotfiles
   + alfred
   + awscli
   + libressl
-    * symlink to openssl
+    * path
   + iterm2
     * dracula
   + tmux
+  	* .tmux.conf
   + nvim
   + fish
+  	* config.fish
     * fisherman
     * docker-fish-completion
   + go
