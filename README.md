@@ -1,11 +1,7 @@
 # dotfiles
 
 ```
-curl -OL https://github.com/himu62/dotfiles/archive/master.zip
-unzip master.zip -d ~
-rm master.zip
-mv ~/dotfiles-master ~/dotfiles
-make -C ~/dotfiles
+curl -fsSL https://raw.githubusercontent.com/himu62/dotfiles/master/startup.sh | sh
 ```
 
 ## install list
