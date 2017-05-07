@@ -25,6 +25,7 @@ make -C ~/dotfiles
     * path
   + iterm2
     * dracula
+    * fish, tmux
   + tmux
   	* .tmux.conf
   + nvim
