@@ -28,3 +28,5 @@ brew cask install atom
 
 ln -snf ~/dotfiles/files/.config ~/.config
 ln -snf ~/dotfiles/files/.tmux.conf ~/.tmux.conf
+ln -snf ~/dotfiles/files/.editorconfig ~/.editorconfig
+ln -snf ~/dotfiles/files/.gitignore ~/.gitignore
