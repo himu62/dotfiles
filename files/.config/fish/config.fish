@@ -13,6 +13,8 @@ set -U fish_user_paths /usr/local/opt/libressl/bin $fish_user_paths
 
 set -U fish_user_paths ~/bin $fish_user_paths
 
+set -x GOPATH ~
+
 alias gst="git status"
 alias gci="git commit -m"
 alias glog="git log --oneline --graph"
