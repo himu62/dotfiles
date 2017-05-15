@@ -2,4 +2,9 @@ files/.config/fish/fishd.*
 files/.config/fish/fishfile
 files/.config/fisherman/
 
+files/.config/fish/completions/
+files/.config/fish/functions/
+files/.config/gocode/
+files/.config/yarn/
+
 tmp/
