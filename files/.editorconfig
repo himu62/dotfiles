@@ -11,5 +11,11 @@ insert_final_newline = true
 [**.go]
 indent_style = tab
 
-[Makefile,**.md]
+[Makefile]
+indent_style = tab
+
+[**.md]
+trim_trailing_whitespace = false
+
+[**.rb]
 indent_size = 2
