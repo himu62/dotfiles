@@ -14,6 +14,9 @@ indent_style = tab
 [Makefile]
 indent_style = tab
 
+[**.mk]
+indent_style = tab
+
 [**.md]
 trim_trailing_whitespace = false
 
