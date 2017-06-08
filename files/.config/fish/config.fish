@@ -11,6 +11,7 @@ set -x MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 
 set -U fish_user_paths /usr/local/opt/libressl/bin $fish_user_paths
 set -U fish_user_paths ~/bin $fish_user_paths
+set -U fish_user_paths ~/.nodebrew/current/bin $fish_user_paths
 
 set -x GOPATH ~
 
@@ -24,4 +25,4 @@ alias la="ls -ahl"
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/h-kobayashi/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/h-kobayashi/google-cloud-sdk/path.fish.inc'; else; . '/Users/h-kobayashi/google-cloud-sdk/path.fish.inc'; end; end
 
-rbenv init - | source
+# rbenv init - | source
