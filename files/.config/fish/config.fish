@@ -6,6 +6,7 @@ function fish_prompt
 end
 
 set -U fish_user_paths /usr/local/bin
+set -U fish_user_paths /usr/local/sbin $fish_user_paths
 set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
 set -x MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 
@@ -26,3 +27,4 @@ alias la="ls -ahl"
 if [ -f '/Users/h-kobayashi/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/h-kobayashi/google-cloud-sdk/path.fish.inc'; else; . '/Users/h-kobayashi/google-cloud-sdk/path.fish.inc'; end; end
 
 # rbenv init - | source
+set -U fish_user_paths ~/.rbenv/shims $fish_user_paths
