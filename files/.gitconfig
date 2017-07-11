@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+name = himu62
+email = hiromu_kobayashi@voyagegroup.com
+
+[core]
+	excludesfile = /Users/h-kobayashi/.gitignore
