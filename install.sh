@@ -12,6 +12,7 @@ brew install fish
 brew install tmux
 brew install yarn
 brew install go
+brew install direnv
 
 brew tap neovim/neovim
 brew install neovim

@@ -39,3 +39,8 @@ set -x PATH $PATH ~/.rbenv/shims
 set -x PATH $PATH ~/.plenv/shims
 
 set -x PATH $PATH ~/.cargo/bin
+
+# direnv hook fish
+function __direnv_export_eval --on-event fish_prompt;
+        eval (direnv export fish);
+end
