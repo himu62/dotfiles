@@ -1,3 +1,6 @@
+function fish_greeting
+end
+
 function fish_prompt
   set_color green
   echo -n "~"
@@ -21,6 +24,7 @@ set -x ANDROID_HOME ~/Library/Android/sdk $PATH
 set -x GOPATH ~
 
 abbr -a gst "git status"
+abbr -a ga "git add"
 abbr -a gci "git commit -m"
 abbr -a glog "git log --oneline --graph"
 abbr -a gdf "git diff"
