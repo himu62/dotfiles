@@ -23,13 +23,16 @@ set -x ANDROID_HOME ~/Library/Android/sdk $PATH
 
 set -x GOPATH ~
 
+abbr -a gb "git branch"
 abbr -a gst "git status"
+abbr -a gco "git checkout"
 abbr -a ga "git add"
 abbr -a gci "git commit -m"
 abbr -a glog "git log --oneline --graph"
 abbr -a gdf "git diff"
 abbr -a gpl "git pull origin (git symbolic-ref --short HEAD)"
 abbr -a gps "git push origin (git symbolic-ref --short HEAD)"
+abbr -a gf "git fetch origin -p"
 
 abbr -a update "brew update; brew upgrade; gcloud components update"
 abbr -a prune "brew prune; brew cleanup"
