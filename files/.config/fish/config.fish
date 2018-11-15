@@ -20,25 +20,18 @@ set -x ANDROID_HOME ~/Library/Android/sdk $PATH
 
 set -x GOPATH ~
 
-alias gst="git status"
-alias gci="git commit -m"
-alias glog="git log --oneline --graph"
-alias gdf="git diff HEAD"
-alias gpl="git pull origin (~/dotfiles/bin/echo-git-branch)"
-alias gps="git push origin (~/dotfiles/bin/echo-git-branch)"
-alias ll="ls -hl"
-alias la="ls -ahl"
+abbr -a gst "git status"
+abbr -a gci "git commit -m"
+abbr -a glog "git log --oneline --graph"
+abbr -a gdf "git diff"
+abbr -a gpl "git pull origin (git symbolic-ref --short HEAD)"
+abbr -a gps "git push origin (git symbolic-ref --short HEAD)"
 
-#rbenv init - | source
-set -x PATH $PATH ~/.rbenv/shims
+abbr -a update "brew update; brew upgrade; gcloud components update"
+abbr -a prune "brew prune; brew cleanup"
 
 # The next line updates PATH for the Google Cloud SDK.
 #if [ -f '/Users/h-kobayashi/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/h-kobayashi/google-cloud-sdk/path.fish.inc'; else; . '/Users/h-kobayashi/google-cloud-sdk/path.fish.inc'; end; end
-
-#plenv init - | source
-set -x PATH $PATH ~/.plenv/shims
-
-set -x PATH $PATH ~/.cargo/bin
 
 # direnv hook fish
 function __direnv_export_eval --on-event fish_prompt;
