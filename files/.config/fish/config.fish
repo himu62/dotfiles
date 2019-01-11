@@ -36,12 +36,8 @@ abbr -a gps "git push origin (git symbolic-ref --short HEAD)"
 abbr -a gf "git fetch origin -p"
 
 abbr -a update "brew update; brew upgrade; gcloud components update"
-abbr -a prune "brew prune; brew cleanup"
-
-# The next line updates PATH for the Google Cloud SDK.
-#if [ -f '/Users/h-kobayashi/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/h-kobayashi/google-cloud-sdk/path.fish.inc'; else; . '/Users/h-kobayashi/google-cloud-sdk/path.fish.inc'; end; end
 
 # direnv hook fish
 function __direnv_export_eval --on-event fish_prompt;
-        eval (direnv export fish);
+  eval (direnv export fish);
 end
