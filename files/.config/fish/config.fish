@@ -21,6 +21,8 @@ set -x PATH $PATH ~/Library/Android/sdk/platform-tools
 set -x PATH $PATH ~/Library/Android/sdk/tools
 set -x ANDROID_HOME ~/Library/Android/sdk $PATH
 
+set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
+
 set -x GOPATH ~
 
 abbr -a gb "git branch"

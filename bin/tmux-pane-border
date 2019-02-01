@@ -1,0 +1,27 @@
+#!/bin/bash -e
+
+idx=$1
+cmd=$2
+path=$3
+pid=$4
+
+if status=$(cd $path && git --no-optional-locks status 2> /dev/null) ; then
+	branch=`cd $path && git --no-optional-locks rev-parse --abbrev-ref HEAD`
+	echo " $idx:$cmd:$path [$branch] "
+else
+	echo " $idx:$cmd:$path "
+fi
+
+#if [ $cmd = "ssh" ] ; then
+#	ssh_info=`ps -o command -p $pid`
+#	hostname=`echo $ssh_info | rev | cut -d" " -f1 | rev`
+#	echo " $idx:$cmd:$hostname "
+#else
+#	if status=$(cd $path && git --no-optional-locks status 2> /dev/null) ; then
+#		branch=`cd $path && git --no-optional-locks rev-parse --abbrev-ref HEAD`
+#		echo " $idx:$cmd:$path [$branch] "
+#	else
+#		echo " $idx:$cmd:$path "
+#	fi
+#fi
+
