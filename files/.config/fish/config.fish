@@ -8,17 +8,19 @@ function fish_prompt
   echo -n "> "
 end
 
-set -x PATH $PATH /usr/local/bin
-set -x PATH $PATH /usr/local/sbin
-set -x PATH $PATH /usr/local/opt/coreutils/libexec/gnubin
+set -g fish_color_command normal
+
+set -g fish_user_paths /usr/local/bin $fish_user_paths
+set -g fish_user_paths /usr/local/sbin $fish_user_paths
+
+set -g fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
 set -x MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 
-set -x PATH $PATH /usr/local/opt/libressl/bin
-set -x PATH $PATH ~/bin
-set -x PATH $PATH ~/.nodebrew/current/bin
+set -g fish_user_paths /usr/local/opt/libressl/bin $fish_user_paths
+set -g fish_user_paths ~/bin $fish_user_paths
 
-set -x PATH $PATH ~/Library/Android/sdk/platform-tools
-set -x PATH $PATH ~/Library/Android/sdk/tools
+set -g fish_user_paths ~/Library/Android/sdk/platform-tools $fish_user_paths
+set -g fish_user_paths ~/Library/Android/sdk/tools $fish_user_paths
 set -x ANDROID_HOME ~/Library/Android/sdk $PATH
 
 set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
