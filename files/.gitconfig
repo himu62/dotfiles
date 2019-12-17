@@ -4,4 +4,4 @@ name = himu62
 email = hiromu_kobayashi@voyagegroup.com
 
 [core]
-	excludesfile = /Users/h-kobayashi/.gitignore
+excludesfile = /Users/h-kobayashi/.gitignore

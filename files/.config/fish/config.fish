@@ -16,18 +16,12 @@ set -g fish_user_paths /usr/local/sbin $fish_user_paths
 set -g fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
 set -x MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 
-set -g fish_user_paths /usr/local/opt/libressl/bin $fish_user_paths
 set -g fish_user_paths ~/bin $fish_user_paths
-
-set -g fish_user_paths ~/Library/Android/sdk/platform-tools $fish_user_paths
-set -g fish_user_paths ~/Library/Android/sdk/tools $fish_user_paths
-set -x ANDROID_HOME ~/Library/Android/sdk $PATH
-
-set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
 
 set -x GOPATH ~
 
 abbr -a gb "git branch"
+abbr -a gbd "git branch -d (git branch | grep -v 'master\$' | sed -e 's/ //g')"
 abbr -a gst "git status"
 abbr -a gco "git checkout"
 abbr -a ga "git add"
