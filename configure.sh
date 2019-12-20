@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/local/bin/fish
 
 git config --global --edit
 git secrets --register-aws --global

@@ -35,6 +35,8 @@ abbr -a gf "git fetch origin -p"
 
 abbr -a update "brew update; brew upgrade; gcloud components update"
 
+abbr -a g "cd (ghq root)/(ghq list | peco)"
+
 # direnv hook fish
 function __direnv_export_eval --on-event fish_prompt;
   eval (direnv export fish);

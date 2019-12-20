@@ -27,6 +27,8 @@ brew install grep
 brew install protobuf
 brew install jq
 brew install nkf
+brew install ghq
+brew install peco
 
 brew tap neovim/neovim
 brew install neovim

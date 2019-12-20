@@ -5,3 +5,6 @@ email = hiromu_kobayashi@voyagegroup.com
 
 [core]
 excludesfile = /Users/h-kobayashi/.gitignore
+
+[ghq]
+root = /Users/h-kobayashi/src
