@@ -11,7 +11,7 @@ end
 function git_push
   switch (git symbolic-ref --short HEAD)
     case master
-      read -l -P 'You are trying to push to master branch! Are you sure? [Y/n] ' confirm
+      read -l -P 'You are trying to push to master branch! Are you sure? [Y/n]: ' confirm
       switch $confirm
         case y Y
           git push origin (git symbolic-ref --short HEAD)
