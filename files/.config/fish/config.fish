@@ -11,12 +11,10 @@ end
 function git_push
   switch (git symbolic-ref --short HEAD)
     case master
-      echo 'You are trying to push to master branch! Are you sure? [Y/n]' confirm
+      read -l -P 'You are trying to push to master branch! Are you sure? [Y/n] ' confirm
       switch $confirm
         case y Y
           git pull origin (git symbolic-ref --short HEAD)
-        case '*'
-          exit 1
       end
     case '*'
       git pull origin (git symbolic-ref --short HEAD)
