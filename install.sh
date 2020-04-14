@@ -7,6 +7,7 @@ brew update
 brew install git
 brew install git-secrets
 brew install coreutils
+brew install findutils
 brew install awscli
 brew install openssl
 brew install fish
@@ -44,7 +45,7 @@ brew cask install jetbrains-toolbox
 brew cask install 1password
 brew cask install google-cloud-sdk
 
-ln -snf ~/dotfiles/files/.config ~/.config
-ln -snf ~/dotfiles/files/.editorconfig ~/.editorconfig
-ln -snf ~/dotfiles/files/.gitignore ~/.gitignore
-ln -snf ~/dotfiles/files/.gitconfig ~/.gitconfig
+ln -snf ~/src/github.com/himu62/dotfiles/files/.config ~/.config
+ln -snf ~/src/github.com/himu62/dotfiles/files/.editorconfig ~/.editorconfig
+ln -snf ~/src/github.com/himu62/dotfiles/files/.gitignore ~/.gitignore
+ln -snf ~/src/github.com/himu62/dotfiles/files/.gitconfig ~/.gitconfig
