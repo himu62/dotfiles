@@ -45,7 +45,7 @@ brew cask install jetbrains-toolbox
 brew cask install 1password
 brew cask install google-cloud-sdk
 
-ln -snf ~/src/github.com/himu62/dotfiles/files/.config ~/.config
+ln -snf ~/src/github.com/himu62/dotfiles/files/.config/fish/config.fish ~/.config/fish/config.fish
 ln -snf ~/src/github.com/himu62/dotfiles/files/.editorconfig ~/.editorconfig
 ln -snf ~/src/github.com/himu62/dotfiles/files/.gitignore ~/.gitignore
 ln -snf ~/src/github.com/himu62/dotfiles/files/.gitconfig ~/.gitconfig

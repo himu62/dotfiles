@@ -17,5 +17,8 @@ indent_style = tab
 [**.md]
 trim_trailing_whitespace = false
 
-[**.{rb,yml,yaml}]
+[**.{rb,yml,yaml,dig,yml.liquid}]
+indent_size = 2
+
+[fish.config]
 indent_size = 2
