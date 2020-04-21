@@ -32,6 +32,8 @@ set -x MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 set -g fish_user_paths /usr/local/opt/findutils/libexec/gnubin $fish_user_paths
 set -x MANPATH /usr/local/opt/findutils/libexec/gnuman $MANPATH
 
+set -g fish_user_paths /usr/local/opt/python/libexec/bin $fish_user_paths
+
 set -g fish_user_paths ~/bin $fish_user_paths
 
 set -x GOPATH ~
