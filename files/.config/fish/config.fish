@@ -34,6 +34,8 @@ set -x MANPATH /usr/local/opt/findutils/libexec/gnuman $MANPATH
 
 set -g fish_user_paths /usr/local/opt/python/libexec/bin $fish_user_paths
 
+set -g fish_user_paths /usr/local/opt/openssl@1.1/bin $fish_user_paths
+
 set -g fish_user_paths ~/bin $fish_user_paths
 
 set -x GOPATH ~
