@@ -8,3 +8,5 @@ excludesfile = /Users/h-kobayashi/.gitignore
 
 [ghq]
 root = /Users/h-kobayashi/src
+[pull]
+	ff = only
