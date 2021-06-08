@@ -21,6 +21,15 @@ function git_push
   end
 end
 
+function git_delete_squash_merged_branches
+  for branch in (git for-each-ref refs/heads/ "--format=%(refname:short)")
+    #set default_branch (git remote show origin | grep "HEAD branch" | sed "s/.*: //")
+    if string match -- "-*" (git cherry master (git commit-tree (git rev-parse $branch^{tree}) -p (git merge-base master $branch) -m _))
+      git branch -D $branch
+    end
+  end
+end
+
 set -g fish_color_command normal
 
 set -g fish_user_paths /usr/local/bin $fish_user_paths
@@ -37,11 +46,13 @@ set -g fish_user_paths /usr/local/opt/python/libexec/bin $fish_user_paths
 set -g fish_user_paths /usr/local/opt/openssl@1.1/bin $fish_user_paths
 
 set -g fish_user_paths ~/bin $fish_user_paths
+set -g fish_user_paths ~/.poetry/bin $fish_user_paths
 
 set -x GOPATH ~
+set -x PIPENV_VENV_IN_PROJECT true
 
 abbr -a gb "git branch"
-abbr -a gbd "git branch -d (git branch | grep -v 'master\$' | sed -e 's/ //g')"
+abbr -a gbd "git_delete_squash_merged_branches"
 abbr -a gst "git status"
 abbr -a gco "git checkout"
 abbr -a ga "git add"
@@ -56,3 +67,6 @@ abbr -a gf "git fetch origin -p"
 abbr -a update "brew update; brew upgrade; gcloud components update"
 
 abbr -a g "cd (ghq root)/(ghq list | peco)"
+
+set -x EDITOR nvim
+eval (direnv hook fish)
