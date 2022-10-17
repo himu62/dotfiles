@@ -30,20 +30,20 @@ brew install jq
 brew install nkf
 brew install ghq
 brew install peco
+brew install aws-vault
 
 brew tap neovim/neovim
 brew install neovim
 
-brew cask install google-chrome
-brew cask install google-japanese-ime
-brew cask install docker
-brew cask install slack
-brew cask install alfred
-brew cask install iterm2
-brew cask install visual-studio-code
-brew cask install jetbrains-toolbox
-brew cask install 1password
-brew cask install google-cloud-sdk
+brew install google-chrome
+brew install google-japanese-ime
+brew install slack
+brew install alfred
+brew install iterm2
+brew install visual-studio-code
+brew install jetbrains-toolbox
+brew install 1password
+brew install google-cloud-sdk
 
 ln -snf ~/src/github.com/himu62/dotfiles/files/.config/fish/config.fish ~/.config/fish/config.fish
 ln -snf ~/src/github.com/himu62/dotfiles/files/.editorconfig ~/.editorconfig
