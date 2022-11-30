@@ -45,7 +45,7 @@ brew install jetbrains-toolbox
 brew install 1password
 brew install google-cloud-sdk
 
-ln -snf ~/src/github.com/himu62/dotfiles/files/.config/fish/config.fish ~/.config/fish/config.fish
-ln -snf ~/src/github.com/himu62/dotfiles/files/.editorconfig ~/.editorconfig
-ln -snf ~/src/github.com/himu62/dotfiles/files/.gitignore ~/.gitignore
-ln -snf ~/src/github.com/himu62/dotfiles/files/.gitconfig ~/.gitconfig
+ln -f ~/src/github.com/himu62/dotfiles/files/.config/fish/config.fish ~/.config/fish/config.fish
+ln -f ~/src/github.com/himu62/dotfiles/files/.editorconfig ~/.editorconfig
+ln -f ~/src/github.com/himu62/dotfiles/files/.gitignore ~/.gitignore
+ln -f ~/src/github.com/himu62/dotfiles/files/.gitconfig ~/.gitconfig

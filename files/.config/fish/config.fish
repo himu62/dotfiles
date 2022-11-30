@@ -32,20 +32,24 @@ end
 
 set -g fish_color_command normal
 
+set -x EDITOR nvim
+eval (brew shellenv)
+eval (direnv hook fish)
+
 set -g fish_user_paths /usr/local/bin $fish_user_paths
 set -g fish_user_paths /usr/local/sbin $fish_user_paths
 
-set -g fish_user_paths /opt/homebrew/opt/coreutils/libexec/gnubin $fish_user_paths
-set -x MANPATH /opt/homebrew/opt/coreutils/libexec/gnuman $MANPATH
+set -g fish_user_paths $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin $fish_user_paths
+set -x MANPATH $HOMEBREW_PREFIX/opt/coreutils/libexec/gnuman $MANPATH
 
-set -g fish_user_paths /opt/homebrew/opt/findutils/libexec/gnubin $fish_user_paths
-set -x MANPATH /opt/homebrew/opt/findutils/libexec/gnuman $MANPATH
+set -g fish_user_paths $HOMEBREW_PREFIX/opt/findutils/libexec/gnubin $fish_user_paths
+set -x MANPATH $HOMEBREW_PREFIX/opt/findutils/libexec/gnuman $MANPATH
 
-set -g fish_user_paths /opt/homebrew/opt/python/libexec/bin $fish_user_paths
+set -g fish_user_paths $HOMEBREW_PREFIX/opt/python/libexec/bin $fish_user_paths
 
-set -g fish_user_paths /opt/homebrew/opt/openssl/bin $fish_user_paths
+set -g fish_user_paths $HOMEBREW_PREFIX/opt/openssl/bin $fish_user_paths
 
-set -g fish_user_paths /opt/homebrew/share/git-core/contrib/diff-highlight $fish_user_paths
+set -g fish_user_paths $HOMEBREW_PREFIX/share/git-core/contrib/diff-highlight $fish_user_paths
 
 set -g fish_user_paths ~/bin $fish_user_paths
 
@@ -69,6 +73,6 @@ abbr -a update "brew update; brew upgrade; gcloud components update"
 
 abbr -a g "cd (ghq root)/(ghq list | peco)"
 
-set -x EDITOR nvim
-eval (/opt/homebrew/bin/brew shellenv)
-eval (direnv hook fish)
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/ca00732/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
