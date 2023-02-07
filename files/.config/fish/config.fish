@@ -9,9 +9,10 @@ function fish_prompt
 end
 
 function git_push
+  set default_branch (git branch -l master main | sed -E "s/^\*? *//")
   switch (git symbolic-ref --short HEAD)
-    case master
-      read -l -P 'You are trying to push to master branch! Are you sure? [Y/n]: ' confirm
+    case $default_branch
+      read -l -P "You are trying to push to $default_branch branch! Are you sure? [Y/n]: " confirm
       switch $confirm
         case y Y
           git push origin (git symbolic-ref --short HEAD)
@@ -23,8 +24,8 @@ end
 
 function git_delete_squash_merged_branches
   for branch in (git for-each-ref refs/heads/ "--format=%(refname:short)")
-    set default_branch (git remote show origin | grep "HEAD branch" | sed "s/.*: //")
-    if string match -- "-*" (git cherry master (git commit-tree (git rev-parse $branch^{tree}) -p (git merge-base master $branch) -m _))
+    set default_branch (git branch -l master main | sed -E "s/^\*? *//")
+    if string match -- "-*" (git cherry $default_branch (git commit-tree (git rev-parse $branch^{tree}) -p (git merge-base $default_branch $branch) -m _))
       git branch -D $branch
     end
   end
